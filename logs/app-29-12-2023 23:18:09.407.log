@@ -1,0 +1,7 @@
+2023-12-29 23:18:09,609 INFO c.s.a.Main [main] Id: 1 | Name: California Zoo | Customers capacity: 1200
+2023-12-29 23:18:09,618 INFO c.s.a.Main [main] Id: 1 | Name: Aquatic | Capacity: 300 | Zoo ID: 1
+2023-12-29 23:18:09,619 INFO c.s.a.Main [main] Id: 2 | Name: Insects | Capacity: 630 | Zoo ID: 1
+2023-12-29 23:18:09,619 INFO c.s.a.Main [main] Id: 3 | Name: Felines | Capacity: 8 | Zoo ID: 1
+2023-12-29 23:18:09,624 INFO c.s.a.Main [main] Id: 1 | Name: Business Department | Zoo ID: 1
+2023-12-29 23:18:09,625 INFO c.s.a.Main [main] Id: 2 | Name: Security Department | Zoo ID: 1
+2023-12-29 23:18:09,625 INFO c.s.a.Main [main] Id: 3 | Name: Human Resources Department | Zoo ID: 1
