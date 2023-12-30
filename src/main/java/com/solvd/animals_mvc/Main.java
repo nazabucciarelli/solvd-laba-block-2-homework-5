@@ -32,12 +32,12 @@ public class Main {
         zooService.updateById(new Zoo("Texas Zoo",2000),zooId);
         zooService.delete(zooId); */ // Keep in mind that this line deletes everything done above
 
-        // Parsing XML file into a Java object and vice-versa.
+        // Parsing XML file into a Java object
 
         File file = new File("src/main/resources/xml/zoo.xml");
         ZooSAXHandler saxHandler = new ZooSAXHandler();
-
         SAXParserFactory saxParserFactory = SAXParserFactory.newInstance();
+
         try {
             SAXParser saxParser = saxParserFactory.newSAXParser();
             saxParser.parse(file, saxHandler);
@@ -46,19 +46,22 @@ public class Main {
         }
 
         Zoo zoo = saxHandler.getZoo();
+
         LOGGER.info("Id: " + zoo.getId() + " | Name: " + zoo.getName() +
                 " | Customers capacity: " + zoo.getCustomersCapacity());
+
         LOGGER.info("Departments:");
-        zoo.getDepartmentList().forEach((d) -> {
-            LOGGER.info("Id: " + d.getId() + " | Name: " + d.getName()
-                    + " | Zoo ID: " + d.getZooId());
-        });
+        zoo.getDepartmentList().forEach((d) ->
+                LOGGER.info("Id: " + d.getId() + " | Name: " + d.getName()
+                        + " | Zoo ID: " + d.getZooId())
+        );
+
         LOGGER.info("Animal Rooms:");
-        zoo.getAnimalRoomList().forEach((ar) -> {
-            LOGGER.info("Id: " + ar.getId() + " | Name: " + ar.getName() + " " +
-                    "| Capacity: " + ar.getCapacity() + " | Zoo ID: "
-                    + ar.getZooId());
-        });
+        zoo.getAnimalRoomList().forEach((ar) ->
+                LOGGER.info("Id: " + ar.getId() + " | Name: " + ar.getName() +
+                        " | Capacity: " + ar.getCapacity() + " | Zoo ID: "
+                        + ar.getZooId())
+        );
 
     }
 }
